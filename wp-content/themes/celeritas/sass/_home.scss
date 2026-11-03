@@ -1,0 +1,613 @@
+
+.home-banner {
+    max-height: 868px;
+    .swiper-slide{
+        &::before{
+            @include overlay;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.46) 0%,  rgba(0, 0, 0, 0)100%);
+        }
+    }
+    .banner-content{
+        .container{
+            position: relative;
+        }
+    }
+    .banner-swiper-pagination{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        max-width: fit-content;
+        left: unset;
+        rotate: 90deg;
+        .swiper-pagination-bullet{
+            background: $theme-white;
+            opacity: 1;
+            margin: 0 18px;
+            &.swiper-pagination-bullet-active{
+                outline: 8px solid rgba($theme-white, 0.2);
+            }
+        }
+    }
+    .bannerSwiper {
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            height: 868px;
+        }
+    }
+
+    a {
+        font-family: $secondary-font;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $primary-color;
+        background-color: $theme-white;
+        padding: 19px 55px;
+        display: inline-block;
+        margin-top: 58px;
+    }
+
+    h1 {
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 70px;
+        line-height: 70px;
+        letter-spacing: 0%;
+        max-width: 776px;
+        margin-bottom: 20px;
+        color: $theme-white;
+    }
+
+    position: relative;
+
+    .banner-content {
+        padding: 218px 0 100px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 9;
+    }
+
+    h2 {
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: $theme-white;
+    }
+}
+
+.defense-zone {
+    margin-top: -170px;
+    padding-bottom: 60px;
+    z-index: 1;
+    position: relative;
+
+    &::before {
+        content: '';
+        background-color: $primary-background;
+        position: absolute;
+        top: 170px;
+        left: 0;
+        width: 100%;
+        height: 65%;
+        z-index: -1;
+    }
+
+
+    .title {
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        color: $theme-white;
+        position: absolute;
+        bottom: 0;
+        padding: 23px;
+        z-index: 9;
+        width: 100%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: url(../images/home/arrow.svg);
+            top: 50%;
+            right: 25px;
+            width: 9px;
+            height: 17px;
+            transform: translateY(-50%);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    .block {
+        position: relative;
+        display: block;
+        width: 258px;
+        overflow: hidden;
+        margin: 0 auto;
+        img {
+            transition: all 0.5s ease-in-out;
+        }
+
+        &::after {
+            @include overlay;
+        }
+
+        &:hover {
+            .title {
+                &::before {
+                    right: 15px;
+                }
+            }
+
+            img {
+                scale: 1.1;
+            }
+        }
+    }
+
+}
+
+.about-us {
+    padding: 60px 0;
+    background-color: $primary-background;
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-section {
+        width: calc(50% - 10px);
+    }
+
+    .right-section {
+        width: calc(50% - 40px);
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .btn {
+        margin-top: 35px;
+    }
+}
+
+.our-services {
+    padding: 60px 0 120px;
+    background-color: $primary-background;
+
+    h2 {
+        max-width: 790px;
+        margin-bottom: 30px;
+    }
+
+    h5 {
+        padding-top: 13px;
+    }
+
+    a {
+        position: relative;
+        display: block;
+
+        &::before {
+            @include overlay;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        &::after {
+            content: '';
+            background: url(../images/home/our-service-arrow.svg) no-repeat center;
+            width: 63px;
+            height: 63px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        &:hover {
+
+            &::after,
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.career-section {
+    background-color: $secondary-background;
+    padding: 84px 0 60px;
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-section {
+        width: 50%;
+    }
+
+    .right-section {
+        width: 45%;
+        max-width: 500px;
+    }
+
+    .btn {
+        margin-top: 15px;
+    }
+}
+
+.news-events-section {
+    padding: 120px 0;
+    background-color: $primary-background;
+
+    .image-block {
+        position: relative;
+
+        .date {
+            position: absolute;
+            bottom: 0;
+            padding: 14px 27px;
+            font-family: $secondary-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+        }
+
+        &::before {
+            @include overlay;
+        }
+
+    }
+
+    h5 {
+        padding-top: 21px;
+    }
+
+    p {
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    h6 {
+        position: absolute;
+        top: 26px;
+        right: 0;
+        background-color: #F5F5F5;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $primary-color;
+        padding: 14px 55px 13px 20px;
+    }
+
+    .box {
+        .view-more {
+            margin-top: 43px;
+        }
+    }
+
+    .top-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 30px;
+
+        .left-part {
+            max-width: 500px;
+        }
+    }
+}
+
+.subscribe {
+    padding: 48px 0;
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-section {
+        width: calc(50% - 10px);
+        max-width: 360px;
+    }
+
+    .right-section {
+        width: calc(50% - 10px);
+        max-width: 480px;
+    }
+
+    form {
+        display: flex;
+        max-width: fit-content;
+        margin-left: auto;
+    }
+    input{
+        margin: 0;
+    }
+    input[type='email'] {
+        padding: 15px;
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: rgba($theme-black, 0.8);
+        border: 1px solid $primary-color;
+        width: 330px;
+    }
+
+    input[type='submit'] {
+        font-family: $secondary-font;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: center;
+        background-color: $secondary-color;
+        color: $theme-white;
+        padding: 17px 31px;
+        border: 1px solid $secondary-color;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home-banner{
+        h1{
+            font-size: 60px;
+        }
+
+    }
+}
+@media screen and (max-width: 991px) {
+    .defense-zone{
+        padding-bottom: 50px;
+    }
+    .about-us{
+        padding: 50px 0;
+    }
+    .our-services{
+        padding: 50px 0 80px;
+    }
+    .career-section{
+        padding: 64px 0 60px;
+    }
+    .news-events-section{
+        padding: 70px 0;
+    }
+    .home-banner{
+        h1{
+            font-size: 55px;
+        }
+        h2{
+            font-size: 21px;
+        }
+        a{
+            font-size: 20px;
+        }
+    }
+    .about-us{
+        .wrap{
+            flex-direction: column;
+        }
+        .left-section{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .right-section{
+            width: 100%;
+            padding-top: 40px;
+        }
+    }
+    .career-section{
+        .wrap{
+            flex-direction: column;
+        }
+        .left-section{
+            width: 100%;
+        }
+        .right-section{
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto 0;
+        }
+    } 
+    .subscribe{
+        .wrap{
+            flex-direction: column;
+        }
+        .left-section,.right-section{
+            width: 100%;
+        }
+        .right-section{
+            padding-top: 30px;
+        }
+        h3{
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .defense-zone{
+        padding-bottom: 40px;
+    }
+    .about-us{
+        padding: 50px 0;
+    }
+    .our-services{
+        padding: 50px 0 80px;
+    }
+    .career-section{
+        padding: 64px 0 60px;
+    }
+    .home-banner{
+        h1{
+            font-size: 50px;
+            line-height: 1.3;
+        }
+        h2{
+            font-size: 20px;
+        }
+        a{
+            font-size: 18px;
+            padding: 18px 50px;
+        }
+    }
+    .news-events-section{
+        padding: 70px 0;
+        h6{
+            font-size: 16px;
+            padding: 9px 50px 10px 18px;
+        }
+    } 
+}
+@media screen and (max-width: 580px) {
+    .defense-zone{
+        padding-bottom: 30px;
+        margin-top: 30px;
+    }
+    .about-us{
+        padding: 30px 0;
+        p{
+            margin-top: 15px;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+    }
+    .our-services{
+        padding: 30px 0 70px;
+    }
+    .career-section{
+        padding: 54px 0 60px;
+    }
+    .home-banner{
+        max-height: 600px;
+        .banner-content{
+            padding-top: 152px;
+        }
+        h1{
+            font-size: 40px;
+            line-height: 1.3;
+        }
+        h2{
+            font-size: 18px;
+            max-width: 300px;
+        }
+        a{
+            font-size: 17px;
+            padding: 16px 40px;
+            margin-top: 46px;
+        }
+        .bannerSwiper {
+            .swiper-slide {
+                height: 725px;
+                img{
+                    max-height: 600px;
+                    object-position: -8rem;
+                }
+            }
+            .swiper-slide::before {
+             max-height: 600px;
+            }
+        }
+    }
+    .news-events-section{
+        padding: 60px 0;
+        .top-block{
+            .left-part{
+                width: 60%;
+            }
+        }
+    }  
+    .subscribe{
+        form{
+            margin: 0 auto;
+            max-width: 500px;
+        }
+        input[type=submit]{
+            font-size: 17px;
+            padding: 15px 18px;
+        }
+        input[type=email]{
+            width: 100%;
+        }
+    } 
+}
+
+@media (max-width: 573px) {
+    .defense-zone{
+        .block{
+            width: 171px;
+        }
+        .block img{
+            max-width: 171px;
+            max-height: 236px;
+        }
+        .block:after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 171px;
+            height: 100%;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .defense-zone{
+      
+    }
+    .home-banner{
+        h1{
+            font-size: 50px;
+            line-height: 50px;
+            font-weight: 500;       
+            margin: 0;
+            padding-bottom: 21px;     
+        }
+        h2{
+            font-size: 22px;
+            line-height: 25px;
+            font-weight: 400;
+        }
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .subscribe{
+        form{
+            flex-direction: column;
+        }
+        input[type=email]{
+           margin-bottom: 10px;
+        }
+    } 
+}

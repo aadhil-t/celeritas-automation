@@ -1,0 +1,23 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# WordPress configuration
+wp-config.php
+
+# Database backups
+*.sql
+*.sql.gz
+
+# Logs and temporary files
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+
+# IDE settings
+.vscode/
+
+# Cache
+wp-content/cache/

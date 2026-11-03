@@ -1,0 +1,53 @@
+.radar-sec{
+    padding-top: 11.0rem;
+    background-color: #F6F6F6;
+    @media (max-width: 500px) {
+        padding-top: 5rem;
+    }
+    .container{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+        padding-bottom: 8rem;
+    }
+    .top-block{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @media (max-width: 830px) {
+            flex-wrap: wrap;
+        }
+        .left-part{
+            h2{
+                font-size: 3.5rem;
+                font-weight: 500;
+                line-height: 4rem;
+                letter-spacing: 0;
+            }
+            p{
+                padding-top: 1rem;
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: 0%;
+                line-height: 3rem;
+                padding-bottom: 3rem;
+                margin: 0;
+
+            }
+        }
+        .right-part{
+            padding-bottom: 3rem;
+        }
+    }
+    .radarSwiper{
+        .swiper-slide{
+            h5{
+                padding-top: 1.3rem;
+            }
+        }
+        .btn-wrap {
+            display: flex;
+            justify-content: space-between;
+            max-width: 120px;
+            margin: 46px auto 0;
+        }
+    }
+}

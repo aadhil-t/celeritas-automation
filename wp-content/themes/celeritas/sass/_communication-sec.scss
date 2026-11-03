@@ -1,0 +1,61 @@
+.communication-sec{
+    .comm-blk{
+        display: flex;
+        padding-top: 11.2rem;
+        padding-bottom: 11.0rem;
+        @media (max-width: $lg) {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+        }
+        .comm-content{
+            h3{
+                max-width: 61rem;
+                font-size: 3.5rem;
+                font-weight: 500;
+                line-height: 4rem;
+                letter-spacing: 0;
+                @media (max-width: $lg) {
+                    max-width: 100%;
+                }
+                @media (max-width: $md) {
+                    max-width: 100%;
+                    font-size: 3.3rem;
+                }
+                @media (max-width: $sm) {
+                    max-width: 100%;
+                    font-size: 2.8rem;
+                    line-height: 1.2;
+                }
+            }
+            p{
+                max-width: 61rem;
+                margin: 0;
+                padding-top: 2rem;
+                @media (max-width: $lg) {
+                    max-width: 100%;
+                }
+            }
+        }
+        .comm-img{
+            padding-left: 9rem;
+            @media (max-width: 1024px) {
+                padding-left: 2rem;
+            }
+            @media (max-width: $md) {
+                padding-left: 0;
+            }
+            img{
+                max-width: 480px;
+                max-height: 268px;
+                @media (max-width: $md) {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

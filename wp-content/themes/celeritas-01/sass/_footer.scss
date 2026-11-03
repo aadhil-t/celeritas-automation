@@ -1,0 +1,97 @@
+.footer {
+    background-color: $theme-black;
+
+    h6 {
+        color: $theme-white;
+        padding-bottom: 25px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            padding-bottom: 14px;
+        }
+    }
+
+    a {
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: rgba($theme-white, 0.7);
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            color: rgba($theme-white, 0.9);
+        }
+    }
+
+    p {
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: rgba($theme-white, 0.8);
+        margin: 0;
+        padding: 4px 0;
+    }
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-section{
+        width: 28%;
+    }
+    .right-section{
+        width: calc(70% - 40px);
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-block{
+        width: calc(25% - 30px);
+        a{
+            img{
+                padding-right: 6px;
+            }
+        }
+    }
+    .social-media{
+        display: flex;
+        justify-content: space-between;
+        li{
+            margin: 0 3px;
+            a{
+                img{
+                    transition: all 0.3s ease-in-out;
+                    padding: 0;
+                }
+                &:hover{
+                    img{
+                        scale: 1.05;
+                    }
+                }
+            }
+        } 
+    }
+    .footer-logo{
+        padding-bottom: 32px;
+       
+    }
+    .top-block{
+        padding: 79px 0 110px;
+    }
+    .bottom-block{
+        padding: 35px 0;
+        border-top: 1px solid rgba($theme-white, 0.1);
+        a{
+            padding: 0 4px;
+        }
+    }
+    .acodez{
+        font-weight: 500;
+        color: rgba($theme-white, 0.9);
+    }
+}

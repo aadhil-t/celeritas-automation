@@ -1,0 +1,39 @@
+.sub-banner-sec{
+    position: relative;
+    .sub-bnr{
+        .bnr-img{
+            img{
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+                // min-height: 584px; 
+                min-height: 350px;           
+                // display: block;
+            }
+            &::before{
+                @include overlay;
+                background: linear-gradient(92.44deg, rgba(0, 0, 0, 0.46) 6.76%, rgba(0, 0, 0, 0) 96.49%);
+            }
+        }
+    }
+    .sub-banner-content{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .container{
+            h1{
+                font-size: 6rem;
+                line-height: 7rem;
+                font-weight: 500;
+                letter-spacing: 0;
+                padding-bottom: 6.9rem;
+                font-family: $primary-font;
+                color: #FFFFFF;
+                @media (max-width: 430px) {
+                    font-size: 3.5rem;
+                    padding-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

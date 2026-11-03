@@ -1,0 +1,247 @@
+.automation-sec{
+    padding-top: 11.0rem;
+    background-color:#F6F6F6;
+    @media (max-width: $sm) {
+        padding-top: 5rem;
+    }
+    .celeritas-blk{
+        .atomation-blk{
+            padding-bottom: 9rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            @media (max-width: $sm) {
+                padding-bottom: 5rem;
+            }
+            h1{                
+                font-family: PP Neue Montreal;
+                font-size: 4.5rem;
+                font-weight: 500;
+                line-height: 4.8rem;
+                letter-spacing: 0%;
+                padding-bottom: 2rem; 
+                @media (max-width: $sm) {
+                    font-size: 3.5rem;
+                    line-height: 3.8rem;
+                }   
+            }
+            p{
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: 0%;
+                line-height: 3rem;
+                max-width: 78rem;
+                margin: 0;
+            }
+        }
+        .careers-blk{
+            .career-card{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 4rem;    
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                @media (max-width:768px) {
+                    flex-wrap: wrap;;
+                }
+                .career-cntnt{
+                    h2{                    
+                        padding-bottom: 2.2rem;    
+                        font-size: 3rem;
+                        font-weight: 500;
+                        line-height: 4rem;
+                        letter-spacing: 0%;
+                    }
+                    p{
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        line-height: 2.5rem;
+                        letter-spacing: 0%;
+                        max-width: 84rem;
+                        margin: 0;
+                        padding-bottom: 4rem;    
+                        @media (max-width:998px) {
+                            max-width: 60rem;
+                        }
+                        @media (max-width:768px) {
+                            padding-bottom: 1rem;    
+                        }
+                    }
+                    ul{
+                        display: flex;
+                        list-style: none;
+                        gap: 2rem;
+                        margin: 0;
+                        padding: 0;
+                        padding-bottom: 1rem;
+                        @media (max-width:768px) {
+                            padding-bottom: 2rem;    
+                        }
+                        li{
+                            font-family: Lexend;
+                            color: #1E1E1E;
+                            padding: 10px 15px 10px 15px;
+                            background-color: #E6E6E6;
+                            font-weight: 400;
+                            font-size: 1.5rem;
+                            line-height: 2.5rem;
+                            letter-spacing: 0%;
+                        }
+                    }
+                }
+                .career-link{
+                    @media (max-width:768px) {
+                        padding-bottom: 5rem;    
+                    }
+                }
+            }  
+        }
+    }
+}
+
+.form-outer{
+    display: flex;
+    flex-direction: column; 
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin-top: 90px;
+    h1{
+        font-family: PP Neue Montreal;
+        padding-left: 55px;
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 4rem;
+        letter-spacing: 0%;
+    }  
+    .form-blk{
+        display: flex;
+        gap: 20px;
+        padding: 0 55px 0 55px;
+        justify-content: center;
+        .left{
+            display: flex;
+            width: 525px;
+            flex-direction: column;
+            p{
+                font-family: "PP Neue Montreal", serif;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+                display: flex;
+                gap: 23px;
+                letter-spacing: 0%;
+                color: #303030;
+                margin: 0;
+                flex-direction: column;
+            }
+            br{
+                display: none;
+            }
+            input{
+                width: 525px;
+                height: 50px;
+                border: 1px solid;
+            }
+            .resume{
+                .wpcf7-form-control-wrap{
+                    height: 50px;
+                }
+            }
+            .fake{
+                display: none;
+            }
+            select{
+                width: 525px;
+                height: 50px;
+            }
+            
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            p{
+                font-family: "PP Neue Montreal", serif;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+                display: flex;
+                gap: 23px;
+                letter-spacing: 0%;
+                color: #303030;
+                margin: 0;
+                flex-direction: column;
+            }
+            br{
+                display: none;
+            }
+            input{
+                width: 525px;
+                height: 50px;
+                border: 1px solid;
+                input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.txt-input {
+                    padding-left: 15px;
+                }
+            }
+            textarea{
+                height: 123px;
+            }
+        }
+    }
+    .btn{
+        position: relative;
+        width: 188px;
+        height: 58px;
+        align-self: flex-end; // Aligns the button to the left
+        margin-right: 55px;
+        .wpcf7-submit{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 188px;
+            height: 56px;
+        }
+    }
+}
+
+
+// upload btn //
+.upload-container {
+    display: flex;
+    align-items: center;
+    width: 400px;
+  }
+  
+  .upload-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 525px;
+    min-height: 55px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-text {
+    flex-grow: 1;
+    color: #888;
+  }
+  
+  .upload-btn {
+    background: black;
+    color: white;
+    border: none;
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    width: 185px;
+    min-height: 55px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    align-items: center;
+    img{
+        width: 17px;
+        height: 16px;
+    }
+  }
+  

@@ -1,0 +1,133 @@
+.solution-sec{
+    background-color: #F6F6F6;
+    .solution-blk{
+        display: flex;
+        gap: 1rem;
+        padding-top: 11.0rem;
+        padding-bottom: 10rem;
+        justify-content: space-between;
+        @media (max-width: 800px) {
+            flex-direction: column;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .connect-blk{
+            width: 100%;
+            max-width: 402px;
+            h2{
+                letter-spacing: 0%;
+                font-size: 4.5rem;
+                font-weight: 500;
+                line-height: 4.8rem;
+                max-width: 40rem;
+                padding-bottom: 7rem;
+                @media (max-width: 800px) {
+                    padding-bottom: 3rem;
+                }
+                @media (max-width: $sm) {
+                    font-size: 3.5rem;
+                    line-height: 3.8rem;
+                }
+            }
+            .connect-cntnt {
+                width: 100%;
+                max-width: 308px;
+                border-bottom: 0.5px solid rgba(0, 0, 0, 0.6);
+                &:nth-last-of-type(1) { 
+                    border-bottom: unset;
+                }            
+                h5{
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    letter-spacing: 0%;
+                    line-height: 2.88rem;
+                    padding-bottom: 1.5rem;    
+                    padding-top: 3rem;                
+                }
+                p{
+                    font-size: 2rem;
+                    font-weight: 400;
+                    letter-spacing: 0%;
+                    line-height: 3rem;
+                    padding-bottom: 3rem;
+                    margin: 0;
+                    @media (max-width: 800px) {
+                        padding-bottom: 2rem;
+                    }
+                    @media (max-width: $sm) {
+                        padding-bottom: 2rem;
+                    }
+                }   
+                &:last-of-type p {
+                    @media (max-width: $sm) {
+                        padding-bottom: 5rem;
+                    }
+                    padding-bottom: 0;
+                }           
+                &:first-of-type h5 {
+                    padding-top: 0;
+                }           
+            }
+        }
+        .form-outer{
+             p{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                br{
+                    display: none;
+                }
+                span{
+                    padding-bottom: 2.3rem;
+
+                }
+             }
+             input{
+                width: 100%;
+                max-width: 500px;
+                min-width: 500px;
+                min-height: 50px;
+                border: 0.5px solid #000000;
+                color: rgba(246, 246, 246, 0.5);    
+                font-family: PP Neue Montreal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                letter-spacing: 0%;
+                padding-left: 1.5rem;
+                @media (max-width: 970px) {
+                    min-width: 100%;
+                }
+            }
+             textarea{
+                width: 100%;
+                max-width: 500px;
+                min-width: 500px;
+                max-height: 135px;
+                background-color: #F6F6F6;
+                font-family: PP Neue Montreal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                letter-spacing: 0%;
+                padding-left: 1.5rem;
+                @media (max-width: 970px) {
+                    min-width: 100%;
+                }
+            }
+             .wpcf7-submit {
+                width: 100%;
+                min-width: 188px;
+                max-width: 188px;
+                color: #000000;
+                // transition: all 500ms cubic-bezier(0,0,0.2,1);
+            }
+            .wpcf7-submit:hover {
+                color: #FFFFFF;
+                width: 200px;
+                height: 50px;
+                background-color: #000000;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.excellence-sec {
+    padding-top: 12.0rem;
+    background-color: #F6F6F6;
+    @media (max-width: 970px) {
+        padding-top: 4rem;
+    }
+    .excellence-blk {
+        padding-bottom: 12.0rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+        @media (max-width: 970px) {
+            padding-bottom: 4rem;
+        }
+        .excellence-cntnt{
+            h2{
+                font-size: 3.5rem;
+                font-weight: 500;
+                letter-spacing: 0%;
+                line-height: 4rem;
+            }
+            p{
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: 0%;
+                line-height: 3rem;
+                margin: 0;
+                padding-top: 2rem;
+                padding-bottom: 4rem;
+            }
+        }
+        .ExcellenceSwiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    position: relative; // Ensure relative positioning
+                    overflow: hidden;
+
+                    a {
+                        position: relative;
+                        display: block;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
+                            max-height: 391px;
+                            max-width: 552px; 
+                            object-position: center;
+                        }
+                    }
+                    span {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        max-width: 552px;
+                        height: 60px; // Initial height of the black bar
+                        background: rgba(0, 0, 0, 0.7);
+                        color: #fff;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.5s ease-in-out;
+                        z-index: 0;
+                    }
+                    
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        transition: all 0.5s ease-in-out;
+                    }
+
+                    &::after {
+                        content: "";
+                        background: url("../images/about-us/arrow.svg") no-repeat center;
+                        width: 63px;
+                        height: 63px;
+                        display: block;
+                        position: absolute;
+                        bottom: 0px; // Add some spacing from bottom
+                        right: 0px;
+                        opacity: 0;
+                        transition: all 0.5s ease-in-out;
+                    }
+
+                    &:hover::before,
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                    &:hover span {
+                        height: 100%; // Expands to cover the full image on hover
+                        font-size: 1.5rem; // Slightly increases text size on hover
+                    }
+                }
+            }
+            .excellence-btn{
+                // padding-bottom: 12.0rem;
+            }
+        }
+    }
+}
+
+

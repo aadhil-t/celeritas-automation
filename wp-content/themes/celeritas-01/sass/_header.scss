@@ -1,0 +1,208 @@
+.header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0) 100%);
+
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: calc(20% - 30px);
+    }
+
+    .right-part {
+        display: flex;
+        justify-content: space-between;
+        width: calc(80% - 50px);
+        position: relative;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            width: 90%;
+
+            li {
+                list-style: none;
+                margin: 0 15px;
+            }
+        }
+
+        a {
+            position: relative;
+
+            &::after {
+                content: '';
+                background-color: rgba($theme-white, 0.7);
+                width: 0;
+                height: 2px;
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .submenu {
+            position: relative;
+
+            a {
+                padding-right: 7px;
+            }
+
+            &::after {
+                content: '';
+                background: url('../images/header/submenu.svg') no-repeat center;
+                display: inline-block;
+                width: 12px;
+                height: 7px;
+                position: absolute;
+                top: 8px;
+            }
+
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                min-width: 336px;
+                background: $theme-white;
+                z-index: 9;
+                li {
+                    margin: 0;
+                }
+
+                a {
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    letter-spacing: 0%;
+                    color: $secondary-color;
+                    padding: 15px 25px;
+                    display: block;
+                    transition: all 0.5s ease;
+                    position: relative;
+
+                    &:hover {
+                        background-color: $secondary-background;
+                        font-weight: 500;
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        background: url(../images/header/submenu-arrow.svg) no-repeat center;
+                        width: 18px;
+                        height: 12px;
+                        display: block;
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        opacity: 0;
+
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    a {
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: $theme-white;
+    }
+
+    .nav-list {
+        opacity: 1;
+        
+    }
+
+    .search-field {
+        width: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        max-width: 380px;
+        transform: translateY(50%);
+        input {
+            width: 100%;
+            padding: 10px 15px;
+            display: inline-block;
+            max-width: 350px;
+            border: none;
+            outline: none;
+        }
+
+        &.active {
+            width: 100%;
+
+        }
+    }
+    .hamburger-icon{
+        display: none;
+        margin-left: 30px;
+        span{
+            background-color: $theme-white;
+            width: 25px;
+            height: 2px;
+            margin: 6px 0;
+            display: block;
+            cursor: pointer;
+            &:first-child{
+                margin-top: 2px;
+            }
+        }
+        &.active{
+            
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header{
+        .right-part{
+            justify-content: flex-end;
+            .nav-list{
+               position: fixed;
+               right: -100%;
+            }
+        } 
+        .hamburger-icon{
+            display: block;
+        }
+    } 
+}

@@ -1,0 +1,94 @@
+/* colors */
+
+$primary-color: #303030;
+$secondary-color: #000000;
+$theme-white: #ffffff;
+$primary-background: #F6F6F6;
+$secondary-background: #E9E9E9;
+$theme-white-80: rgba(#ffffff, 0.8);
+$theme-black: #1E1E1E;
+$theme-black-80: rgba(#000000, 0.8);
+$theme-yellow: #FAFC90;
+$theme-gray: #7D7676;
+$theme-btnlnk: #6D2797;
+$theme-lightgray: #F1EAF3;
+$theme-darktgray: #D9D9D9;
+$theme-darktgray1: #F4EEF5;
+$theme-blue: #4894CE;
+$theme-darkblue: #306FAB;
+$theme-darkblue1: #3471AB;
+$theme-lightpink: #FAF3FC;
+
+
+$theme-prdtgreen: #24897AE5;
+$theme-prdtyellow: #DA9823E5;
+$theme-prdtblue: #0B5C94E5;
+$theme-prdtdarkblue: #3C5F8BE5;
+$theme-prdtlightblue: #0D9DAFE5;
+$theme-prdtviolet: #5C46A0E5;
+
+$theme-white-20: #FFFFFF33;
+$theme-white-40: #FFFFFF66;
+$theme-white-75: #FFFFFFBF;
+$theme-white-85: #FFFFFFD9;
+$theme-black-65: #000000A6;
+$theme-black-50: #00000080;
+$theme-light-gray: #EDEDED;
+$theme-light-gray-1: #CECECE;
+$theme-light-gray-2: #F5F7FA;
+$theme-light-gray-3: #FEFFFC;
+$theme-light-gray-4: #D9D9D9;
+$theme-light-gray-5: #CBC9C9;
+$theme-light-gray-6: #E1E7F0;
+$theme-light-gray-7: #E6EEF0;
+$theme-dark-gray: #404040;
+$theme-dark-gray-1: #454545;
+$theme-dark: #1E1E1E;
+$theme-red: #C1252B;
+$theme-green: #25c159;
+$theme-orange: #EE5016;
+
+/**********************************/
+
+/* fonts */
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/ppneuemontreal-book.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/ppneuemontreal-medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../fonts/static/Lexend-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Lexend';
+    src: url('../fonts/static/Lexend-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+// Fonts
+$primary-font: "PP Neue Montreal", serif;
+$secondary-font: "Lexend", serif;
+
+$font-size: 1.6rem;
+
+/**********************************/
+
+
+/* breakpoints */
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1280px;
+$xxl: 1440px;
+/**********************************/
+$grid_gap: 0 20px;
